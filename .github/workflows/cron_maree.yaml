@@ -10,16 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Permessi necessari per fare in modo che l'automazione possa riscrivere i file nel repository
     permissions:
       contents: write
 
     steps:
     - name: Checkout del deposito
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # Aggiornato alla v4 per Node 20/24
 
     - name: Configurazione Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5  # Aggiornato alla v5 per Node 20/24
       with:
         python-version: '3.10'
 
@@ -35,5 +34,7 @@ jobs:
       run: |
         git config --global user.name "MareeBot"
         git config --global user.email "bot@github.com"
+        # Rimuoviamo formalmente il csv se fosse ancora tracciato e aggiungiamo l'ics
+        git rm --cached maree_calendar.csv 2>/dev/null || true
         git add maree_picchi.json maree_calendar.ics
         git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Aggiornamento automatico dati maree" && git push)
