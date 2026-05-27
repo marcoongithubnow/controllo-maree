@@ -77,7 +77,7 @@ for i in range(1, len(livelli_api)):
             
             indici_stessa_tendenza = []
             
-        tendenza_attuale = nueva_tendenza
+        tendenza_attuale = nuova_tendenza
 
     indici_stessa_tendenza.append(i)
 
