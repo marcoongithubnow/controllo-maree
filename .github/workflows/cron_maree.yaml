@@ -1,0 +1,39 @@
+name: Aggiornamento Automatico Maree
+
+on:
+  schedule:
+    # Gira ogni giorno alle 02:00 UTC (04:00 del mattino in Italia)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Permette di avviarlo a mano cliccando su un bottone su GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Permessi necessari per fare in modo che l'automazione possa riscrivere i file nel repository
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout del deposito
+      uses: actions/checkout@v3
+
+    - name: Configurazione Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Installazione librerie
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Esecuzione Script Maree
+      run: python aggiorna_maree.py
+
+    - name: Push dei file aggiornati su GitHub
+      run: |
+        git config --global user.name "MareeBot"
+        git config --global user.email "bot@github.com"
+        git add maree_picchi.json maree_calendar.csv
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Aggiornamento automatico dati maree" && git push)
