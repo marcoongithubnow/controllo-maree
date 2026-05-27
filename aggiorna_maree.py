@@ -1,4 +1,3 @@
-import csv
 import json
 import requests
 from datetime import datetime, timedelta
@@ -78,13 +77,24 @@ for i in range(1, len(livelli_api)):
             
             indici_stessa_tendenza = []
             
-        tendenza_attuale = nuova_tendenza
+        tendenza_attuale = nueva_tendenza
 
     indici_stessa_tendenza.append(i)
 
 json_filtrato = []
-righe_csv = []
 
+# Costruzione del file iCalendar (.ics) standard
+ics_lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Maree Bot//Controllo Maree//IT",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH",
+    "X-WR-CALNAME:Controllo Maree",
+    "X-WR-TIMEZONE:Europe/Rome"
+]
+
+contatore = 0
 for riga in risultati_finali:
     if riga["picco"] != "-":
         json_filtrato.append({
@@ -98,27 +108,31 @@ for riga in risultati_finali:
         emoji = "👑" if "ALTA" in riga["picco"] else "⚓"
         nome_marea = "Alta Marea" if "ALTA" in riga["picco"] else "Bassa Marea"
         
-        riga_calendar = {
-            "Subject": f"{emoji} {nome_marea} ({riga['livello']} m)",
-            "Start Date": dt_inizio.strftime("%Y-%m-%d"),
-            "Start Time": dt_inizio.strftime("%H:%M"),
-            "End Date": dt_fine.strftime("%Y-%m-%d"),
-            "End Time": dt_fine.strftime("%H:%M"),
-            "Description": f"Picco reale calcolato al centro del flesso. Livello: {riga['livello']} m MSL."
-        }
-        righe_csv.append(riga_calendar)
+        # Formato data iCalendar: YYYYMMDDTHMMSS
+        stamp_ora = datetime.now().strftime("%Y%m%dT%H%M%SZ")
+        str_inizio = dt_inizio.strftime("%Y%m%dT%H%M%S")
+        str_fine = dt_fine.strftime("%Y%m%dT%H%M%S")
+        
+        contatore += 1
+        ics_lines.extend([
+            "BEGIN:VEVENT",
+            f"UID:marea_2026_{contatore}@controllo_maree",
+            f"DTSTAMP:{stamp_ora}",
+            f"DTSTART;TZID=Europe/Rome:{str_inizio}",
+            f"DTEND;TZID=Europe/Rome:{str_fine}",
+            f"SUMMARY:{emoji} {nome_marea} ({riga['livello']} m)",
+            f"DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: {riga['livello']} m MSL.",
+            "END:VEVENT"
+        ])
 
-nome_file_json = "maree_picchi.json"
-with open(nome_file_json, "w", encoding="utf-8") as f:
+ics_lines.append("END:VCALENDAR")
+
+# Salva il file JSON
+with open("maree_picchi.json", "w", encoding="utf-8") as f:
     json.dump(json_filtrato, f, ensure_ascii=False, indent=4)
 
-nome_file_csv = "maree_calendar.csv"
-colonne_csv = ["Subject", "Start Date", "Start Time", "End Date", "End Time", "Description"]
+# Salva il file iCalendar (.ics)
+with open("maree_calendar.ics", "w", encoding="utf-8") as f:
+    f.write("\n".join(ics_lines))
 
-with open(nome_file_csv, "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=colonne_csv)
-    writer.writeheader()
-    writer.writerows(righe_csv)
-
-print(f"✅ Elaborazione completata con successo alle {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-print(f"📊 Totale picchi rilevati: {len(json_filtrato)}")
+print(f"✅ Calendario .ics generato con successo alle {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
