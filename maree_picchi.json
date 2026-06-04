@@ -1,14 +1,6 @@
 [
     {
-        "data_ora": "2026-06-03 09:00",
-        "picco": "⚓ BASSA MAREA"
-    },
-    {
-        "data_ora": "2026-06-03 17:30",
-        "picco": "👑 ALTA MAREA"
-    },
-    {
-        "data_ora": "2026-06-04 09:30",
+        "data_ora": "2026-06-04 09:45",
         "picco": "⚓ BASSA MAREA"
     },
     {
@@ -29,6 +21,14 @@
     },
     {
         "data_ora": "2026-06-06 19:30",
+        "picco": "👑 ALTA MAREA"
+    },
+    {
+        "data_ora": "2026-06-07 07:00",
+        "picco": "⚓ BASSA MAREA"
+    },
+    {
+        "data_ora": "2026-06-07 20:00",
         "picco": "👑 ALTA MAREA"
     }
 ]
