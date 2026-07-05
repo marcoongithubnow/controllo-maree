@@ -1,26 +1,10 @@
 [
     {
-        "data_ora": "2026-07-04 01:30",
-        "picco": "⚓ BASSA MAREA"
-    },
-    {
-        "data_ora": "2026-07-04 06:00",
-        "picco": "👑 ALTA MAREA"
-    },
-    {
-        "data_ora": "2026-07-04 10:15",
-        "picco": "⚓ BASSA MAREA"
-    },
-    {
-        "data_ora": "2026-07-04 17:45",
-        "picco": "👑 ALTA MAREA"
-    },
-    {
         "data_ora": "2026-07-05 01:30",
         "picco": "⚓ BASSA MAREA"
     },
     {
-        "data_ora": "2026-07-05 07:30",
+        "data_ora": "2026-07-05 07:00",
         "picco": "👑 ALTA MAREA"
     },
     {
@@ -36,7 +20,15 @@
         "picco": "⚓ BASSA MAREA"
     },
     {
-        "data_ora": "2026-07-06 18:00",
+        "data_ora": "2026-07-06 08:15",
+        "picco": "👑 ALTA MAREA"
+    },
+    {
+        "data_ora": "2026-07-06 10:30",
+        "picco": "⚓ BASSA MAREA"
+    },
+    {
+        "data_ora": "2026-07-06 18:15",
         "picco": "👑 ALTA MAREA"
     },
     {
@@ -44,7 +36,15 @@
         "picco": "⚓ BASSA MAREA"
     },
     {
-        "data_ora": "2026-07-07 19:00",
+        "data_ora": "2026-07-07 18:45",
+        "picco": "👑 ALTA MAREA"
+    },
+    {
+        "data_ora": "2026-07-08 03:30",
+        "picco": "⚓ BASSA MAREA"
+    },
+    {
+        "data_ora": "2026-07-08 16:45",
         "picco": "👑 ALTA MAREA"
     }
 ]
