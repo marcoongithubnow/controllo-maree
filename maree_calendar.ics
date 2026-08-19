@@ -7,90 +7,58 @@ X-WR-CALNAME:Controllo Maree
 X-WR-TIMEZONE:Europe/Rome
 BEGIN:VEVENT
 UID:marea_2026_1@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260818T070000
-DTEND;TZID=Europe/Rome:20260818T073000
-SUMMARY:👑 Alta Marea (-0.38 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.38 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_2@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260818T103000
-DTEND;TZID=Europe/Rome:20260818T110000
-SUMMARY:⚓ Bassa Marea (-0.4 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.4 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_3@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260818T163000
-DTEND;TZID=Europe/Rome:20260818T170000
-SUMMARY:👑 Alta Marea (-0.3 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.3 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_4@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260819T010000
-DTEND;TZID=Europe/Rome:20260819T013000
-SUMMARY:⚓ Bassa Marea (-0.54 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.54 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_5@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260819T093000
-DTEND;TZID=Europe/Rome:20260819T100000
-SUMMARY:👑 Alta Marea (-0.38 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.38 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_6@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260819T110000
-DTEND;TZID=Europe/Rome:20260819T113000
-SUMMARY:⚓ Bassa Marea (-0.39 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.39 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_7@controllo_maree
-DTSTAMP:20260818T025609Z
+DTSTAMP:20260819T025735Z
 DTSTART;TZID=Europe/Rome:20260819T161500
 DTEND;TZID=Europe/Rome:20260819T164500
-SUMMARY:👑 Alta Marea (-0.32 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.32 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_8@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260820T010000
-DTEND;TZID=Europe/Rome:20260820T013000
-SUMMARY:⚓ Bassa Marea (-0.51 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.51 m MSL.
-END:VEVENT
-BEGIN:VEVENT
-UID:marea_2026_9@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260820T150000
-DTEND;TZID=Europe/Rome:20260820T153000
 SUMMARY:👑 Alta Marea (-0.33 m)
 DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.33 m MSL.
 END:VEVENT
 BEGIN:VEVENT
-UID:marea_2026_10@controllo_maree
-DTSTAMP:20260818T025609Z
-DTSTART;TZID=Europe/Rome:20260821T010000
-DTEND;TZID=Europe/Rome:20260821T013000
+UID:marea_2026_2@controllo_maree
+DTSTAMP:20260819T025735Z
+DTSTART;TZID=Europe/Rome:20260820T010000
+DTEND;TZID=Europe/Rome:20260820T013000
+SUMMARY:⚓ Bassa Marea (-0.53 m)
+DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.53 m MSL.
+END:VEVENT
+BEGIN:VEVENT
+UID:marea_2026_3@controllo_maree
+DTSTAMP:20260819T025735Z
+DTSTART;TZID=Europe/Rome:20260820T150000
+DTEND;TZID=Europe/Rome:20260820T153000
+SUMMARY:👑 Alta Marea (-0.34 m)
+DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.34 m MSL.
+END:VEVENT
+BEGIN:VEVENT
+UID:marea_2026_4@controllo_maree
+DTSTAMP:20260819T025735Z
+DTSTART;TZID=Europe/Rome:20260821T020000
+DTEND;TZID=Europe/Rome:20260821T023000
 SUMMARY:⚓ Bassa Marea (-0.49 m)
 DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.49 m MSL.
 END:VEVENT
 BEGIN:VEVENT
-UID:marea_2026_11@controllo_maree
-DTSTAMP:20260818T025609Z
+UID:marea_2026_5@controllo_maree
+DTSTAMP:20260819T025735Z
 DTSTART;TZID=Europe/Rome:20260821T150000
 DTEND;TZID=Europe/Rome:20260821T153000
-SUMMARY:👑 Alta Marea (-0.28 m)
-DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.28 m MSL.
+SUMMARY:👑 Alta Marea (-0.3 m)
+DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.3 m MSL.
+END:VEVENT
+BEGIN:VEVENT
+UID:marea_2026_6@controllo_maree
+DTSTAMP:20260819T025735Z
+DTSTART;TZID=Europe/Rome:20260822T050000
+DTEND;TZID=Europe/Rome:20260822T053000
+SUMMARY:⚓ Bassa Marea (-0.52 m)
+DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.52 m MSL.
+END:VEVENT
+BEGIN:VEVENT
+UID:marea_2026_7@controllo_maree
+DTSTAMP:20260819T025735Z
+DTSTART;TZID=Europe/Rome:20260822T143000
+DTEND;TZID=Europe/Rome:20260822T150000
+SUMMARY:👑 Alta Marea (-0.29 m)
+DESCRIPTION:Picco reale calcolato al centro del flesso. Livello: -0.29 m MSL.
 END:VEVENT
 END:VCALENDAR
